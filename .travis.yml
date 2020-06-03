@@ -1,2 +1,5 @@
+arch: 
+- amd64
+- ppc64le
 language: java
 after_failure: print_surefire_reports.sh
