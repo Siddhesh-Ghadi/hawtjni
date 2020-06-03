@@ -1,5 +1,7 @@
 arch: 
-- amd64
-- ppc64le
+  - amd64
+  - ppc64le
 language: java
+addon:
+  apt: maven
 after_failure: print_surefire_reports.sh
