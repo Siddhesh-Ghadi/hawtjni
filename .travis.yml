@@ -4,7 +4,8 @@ jobs:
     - arch: amd64
     - arch: ppc64le
       before_install: 
-        - curl https://downloads.apache.org/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz|tar -xf -C /opt
-        - export MAVEN_HOME=/opt/apache-maven-3.6.3
+        - mkdir -p /opt/maven
+        - curl https://downloads.apache.org/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz|tar -xz -C /opt/maven
+        - export MAVEN_HOME=/opt/maven
         - export PATH=${MAVEN_HOME}/bin:${PATH}
 after_failure: print_surefire_reports.sh
